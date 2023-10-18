@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the team!</title>
+</head>
+<body>
+    <h2>Welcome to the team!</h2>
+    
+    <p>You have been invited to join the team <strong>{{ team_name }}</strong>.</p>
+    
+    <p>Current team members:</p>
+    <ul>
+        {% for member_name in existing_members %}
+            <li>{{ member_name }}</li>
+        {% empty %}
+            <li>No existing members</li>
+        {% endfor %}
+    </ul>
+    
+    <p>We are excited to have you on board! Please log in to the project management system to get started.</p>
+    
+    <p>Best regards,</p>
+    <p>The Team</p>
+</body>
+</html>

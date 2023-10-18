@@ -1,0 +1,17 @@
+.idea/
+__pycache__/
+api/
+asset/
+components/
+designs/
+documentations/
+screens/
+training/
+virt/
+teamtrek.kv
+main.sublime-workspace
+user_data.json
+userdata.py
+main.py
+__init__.py
+migrations/
