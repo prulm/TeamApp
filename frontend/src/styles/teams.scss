@@ -1,0 +1,68 @@
+$primary: #3EDB32;
+$secondary: #707070;
+
+.teams-container {
+    display: flex;
+    width: 100%;
+	.teams-body {
+		display: flex;
+		flex-direction: column;
+		padding: 30px;
+		align-items: center;
+		width: 80%;
+		margin-left: 10%;
+		.new-team {
+			align-self: flex-end;
+			width: 15%;
+			height: 35px;
+			margin-top: 32px;
+			margin-right: 13%;
+			cursor: pointer;
+			border: none;
+			border-radius: 5px;
+			background-color: $primary;
+			color: white;
+			font-size: 16px;
+			padding: 5px;
+		    box-shadow:0 3px 5px rgb(0,0,0,0.16);
+		    font-weight: 500;
+		    &:hover {
+		    	border: solid 1px $primary;
+		    	background-color: white;
+		    	color: $primary;
+		    }
+		}
+		.team {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			height: fit-content;
+			width: 72%;
+			border-radius: 5px;
+			margin-top: 10px;
+			padding: 10px;
+			justify-content: space-between;
+			border-bottom: .5px solid #eee;
+			background-color: #eeea;
+			&:hover {
+				cursor: pointer;
+				background-color: transparent;
+			}
+			.title {
+				display: flex;
+				flex-direction: column;
+				h4 {
+					color: $secondary;
+					margin-top: -20px;
+				}
+			}
+			.add-icon {
+				font-size: 30px;
+			    &:hover {
+			    	color: $primary;
+			    	cursor: pointer;
+			    }
+			}
+		}
+	}
+}

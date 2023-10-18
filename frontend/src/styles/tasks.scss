@@ -1,0 +1,32 @@
+.main-table {
+  	display: grid;
+  	grid-gap: 10px;
+  	font-size: 20px;
+  	width: 100%;
+  	margin-left: 100px;
+	.table-row {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr) repeat(2, 0.2fr);
+		border-bottom: .5px solid #eee;
+		background-color: #eeea;
+		border-radius: 5px;
+		&:hover {
+			background-color: transparent;
+			cursor: pointer;
+		}
+		.table-cell {
+		  padding: 10px;
+			.delete {
+				font-size: 20px;
+				color: red;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.header {
+	  font-weight: bold;
+	  background-color: transparent;
+	}
+}

@@ -1,0 +1,135 @@
+$primary: #3EDB32;
+$secondary: #707070;
+
+.reg-container {
+	margin: 0;
+	font-family: "DM Sans", sans-serif;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10vh;
+	.regbox {
+		height: fit-content;
+		width: 50%;
+		margin-top: 10vh;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 150px;
+	    display: flex;
+		flex-direction: column;
+	    align-items: left;
+	    .header {
+	    	p {
+	    		color: $secondary;
+	    		margin-top: -5px;
+	    	}
+	    }
+	    .inputs {
+	    	width: 100%;
+	    	display: flex;
+	    	flex-direction: column;
+	    	align-items: left;
+	    	margin-top: 20px;
+	    	.reglabel {
+				margin-top: 10px;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: left;
+				label {
+					color: $secondary;
+				}
+				input {
+						width: 60%;
+						height: 30px;
+						font-size: 15px;
+						padding: 5px;
+						margin-top: 5px;
+						margin-bottom: 10px;
+						border: solid 0.1px #757575;
+						border-radius: 5px;
+						text-indent: 5px;
+						&:focus {
+							border-radius: 0px;
+							border: none;
+						    outline: transparent;
+						    border-bottom: 2px solid $primary;
+							::placeholder {
+								color: transparent;
+							}
+							~ label {
+								align-self: flex-start;
+								color: $primary;
+								transition: 0.2s ease;
+							}
+						}
+				}
+			}
+	    	.registry-button {
+				width: 60%;
+				height: 35px;
+				margin-top: 40px;
+				cursor: pointer;
+				border: none;
+				border-radius: 5px;
+				background-color: $primary;
+				color: white;
+				font-size: 16px;
+				padding: 5px;
+			    box-shadow:0 3px 5px rgb(0,0,0,0.16);
+			    font-weight: 500;
+			    &:hover {
+			    	border: solid 1px $primary;
+			    	background-color: white;
+			    	color: $primary;
+			    }
+			}
+	    }
+	    .loading {
+			margin-bottom: 0;
+			margin-top: 10px;
+			animation: Loading-spin infinite .5s linear;
+		}
+		.error-msg {
+			color: #d93025;
+			margin-top: 10px;
+		}
+		.success-msg {
+			margin-top: 10px;
+			color: $primary;
+		}
+	    .btmcont {
+			display: flex;
+			flex-direction: column;
+			font-size: 12px;
+			margin-top: 10px;
+			p {
+				margin-top: 0;
+				margin-bottom: 10px;
+				color: $secondary;
+				.link {
+					color: $primary;
+					text-decoration: none;
+					&:visited {
+					}
+					&:active {
+						color: darkgoldenrod;
+					}
+				}
+			}
+		}
+	}
+	.img-box {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-right: 5vw;
+		img {
+			width: 100%;
+		}
+		h2 {
+			color: $secondary;
+		}
+	}
+}

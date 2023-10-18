@@ -1,0 +1,180 @@
+$primary: #3EDB32;
+$secondary: #707070;
+
+.proj-container {
+    display: flex;
+    width: 100%;
+	.proj-body {
+		display: flex;
+		flex-direction: column;
+		padding: 30px;
+		align-items: center;
+		width: 80%;
+		margin-left: 10%;
+		button {
+			align-self: flex-end;
+			width: 15%;
+			height: 35px;
+			margin-top: 32px;
+			margin-right: 10%;
+			cursor: pointer;
+			border: none;
+			border-radius: 5px;
+			background-color: $primary;
+			color: white;
+			font-size: 16px;
+			padding: 5px;
+		    box-shadow:0 3px 5px rgb(0,0,0,0.16);
+		    font-weight: 500;
+		    &:hover {
+		    	border: solid 1px $primary;
+		    	background-color: white;
+		    	color: $primary;
+		    }
+		}
+		.proj-box {
+			display: flex;
+			flex-direction: column;
+			height: fit-content;
+			width: 74%;
+			border: none;
+			border-radius: 10px;
+			box-shadow: 0px .1px 5px .1px rgba(1, 1, 1, .4);
+			margin-top: 30px;
+			padding-left: 6%;
+			padding-bottom: 20px;
+			.expanded-content {
+				width: 94%;
+				margin-top: 20px;
+				display: flex;
+				flex-direction: column;
+				border-top: .5px solid #ddd;
+				.inline {
+					display: inline-flex;
+					align-items: center;
+					gap: 15px;
+				}
+				.task-table {
+				  	display: grid;
+				  	grid-gap: 10px;
+					.table-row {
+						display: grid;
+						grid-template-columns: repeat(5, 1fr) repeat(2, 0.2fr); // Adjust the number of columns to match the table structure
+						border-bottom: .5px solid #eee; // Add horizontal border between rows
+						.table-cell {
+						  padding: 5px; // Adjust the padding as needed
+							.delete {
+								font-size: 20px;
+								color: red;
+								&:hover {
+									cursor: pointer;
+								}
+							}
+							.comment {
+								font-size: 20px;
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+					.header {
+					  font-weight: bold; // Add styling for the header row
+					}
+				}
+			}
+			.top-right {
+				display: flex;
+				flex-direction: row;
+				width: 40%;
+				justify-content: space-between;
+				margin-top: 10px;
+				font-size: 30px;
+				.chat:hover {
+					cursor: pointer;
+					color: $primary;
+				}
+				.delete {
+					color: red;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+				.add-task:hover {
+					cursor: pointer;
+					color: $primary;
+				}
+			}
+			.main {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: -20px;
+				.proj-team {
+					align-self: flex-start;
+					width: 70%;
+					display: flex;
+					flex-direction: column;
+					.title {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-between;
+						padding-right: 17%;
+					}
+					.team {
+						color: $secondary;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-between;
+						padding-right: 20%;
+						margin-top: -5%;
+					}
+
+				}
+				.dropdown {
+					font-size: 30px;
+					margin-left: 18%;
+					transition: transform 0.3s ease;
+		    		transform-origin: center center;
+					&:hover {
+						color: $primary;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+.progress-bar-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 40%;
+	height: 20px;
+	background-color: #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-right: -7%;
+}
+
+.progress-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: #007bff;
+	transition: width 0.3s ease-in-out;
+	z-index: 1;
+}
+
+.progress-label {
+	align-self: center;
+	color: black;
+	margin-left: 40%;
+	z-index: 2;
+	font-weight: 600;
+}
